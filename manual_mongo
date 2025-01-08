@@ -1,0 +1,32 @@
+infos basicas:
+
+net start MongoDB
+net stop MongoDB
+mongosh
+
+comandos básicos:
+show dbs #Lista todos os bancos de dados disponíveis.
+
+use <database> #Seleciona ou cria um banco de dados.
+
+db #Mostra o banco de dados atualmente selecionado.
+
+db.stats() #Mostra estatísticas sobre o banco de dados atual.
+db.<collection>.stats() #Mostra estatísticas sobre a coleção especificada.
+db.serverStatus() #Fornece informações sobre o status do servidor MongoDB.
+
+db.createCollection("<collection_name>")
+db.dropDatabase()
+
+show collections
+db.<collection>.drop()
+
+db.<collection>.insertOne(document) ex: db.myCollection.insertOne({ name: "Alice", age: 25 })
+
+db.<collection>.insertMany([documents]) ex: db.myCollection.insertMany([{ name: "Bob" }, { name: "Charlie" }])
+
+db.myCollection.find()
+db.myCollection.findOne({ name: "Alice" })
+
+db.<collection>.updateOne(filter, update) ex: db.myCollection.updateOne({ name: "Alice" }, { $set: { age: 26 } })
+db.<collection>.deleteOne(filter)

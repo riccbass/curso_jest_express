@@ -1,5 +1,8 @@
 import express from "express";
 import todoRoutes from "./routes/todo.routes.mjs";
+import { connect } from "./mongodb/mongodb.connect.mjs";
+
+connect();
 
 const app = express();
 
@@ -12,5 +15,4 @@ app.get("/", (req, res) => {
   res.json("Hello World!");
 });
 
-app.listen(3000);
 export default app;
